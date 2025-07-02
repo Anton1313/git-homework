@@ -1,8 +1,9 @@
-function converter(str){
-	let array = str.split(' ')
-
+function converter(sum, input, output){
 	function getTax(val1,val2){
 		switch (true) {
+			case (val1===val2): {
+				return 1;
+			}
 			case ((val1==='руб') && (val2==='$')):
 				return 0.013;
 			case ((val1==='$') && (val2==='руб')):
@@ -20,10 +21,10 @@ function converter(str){
 		}
 	}
 	
-	let tax = getTax(array[1], array[2]);
+	let tax = getTax(input, output);
 	
 	if (tax) {
-		return array[0] * tax
+		return sum * tax
 	}
 	 return tax
 }

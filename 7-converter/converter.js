@@ -14,10 +14,14 @@ function converter(sum, input, output){
 			case ((val1==='rub') && (val2==='eur')):
 				return 0.011;
 			default:
-				return null;
+				return null
 		}
 	}
 	
 	let tax = getTax(input, output);
-	return sum * tax
+	
+	if (tax) {
+		return sum * tax
+	}
+	 return tax
 }

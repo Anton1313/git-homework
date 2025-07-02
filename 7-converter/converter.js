@@ -23,7 +23,7 @@ function converter(sum, input, output){
 	
 	let tax = getTax(input, output);
 	
-	if (tax) {
+	if (tax != null) {
 		return sum * tax
 	}
 	 return tax

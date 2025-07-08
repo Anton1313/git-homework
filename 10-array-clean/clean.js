@@ -1,8 +1,9 @@
 function filt (arr, fn){
+	let arr2;
 	for (const el of arr){
-		if (fn(el)){
-			arr.splice(arr.indexOf(el), 1)
+		if (!fn(el)){
+			arr2.push(el)
 		}
 	}
-	return arr;
+	return arr2;
 }

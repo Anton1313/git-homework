@@ -1,12 +1,11 @@
 function luna(card) {
-	const cleanCard = card.replaceAll('-','').split('')
-	console.log(cleanCard)
+	const cleanCard = card.replaceAll('-','').split('').reverse()
 	const lunaCard =  cleanCard.map((num,i) => {
 		if(i % 2 === 0){
-			if ((Number(num) * 2) < 9){
-				num = Number(num) * 2
-			} else {
+			if ((Number(num) * 2) > 9){
 				num = (Number(num) * 2) - 9
+			} else {
+				num = Number(num) * 2
 			}
 		}
 		return num

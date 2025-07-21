@@ -1,9 +1,7 @@
-const hasLicense = true;
+const hasLicence = true;
 const age = 18;
 const isDrunk = false
 
-const canDrive = (age >= 18)
-	&& hasLicense
-	&& !isDrunk
-
-console.log(`${canDrive ? 'может' : 'не может'}`)
+console.log(`${(age >= 18)
+	&& hasLicence
+	&& !isDrunk ? 'может' : 'не может'}`)

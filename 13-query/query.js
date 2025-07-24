@@ -6,11 +6,11 @@ const obj = {
 function str(object) {
 	const arr = Object.entries(object)
 
-	arr.map(element => {
+	const mappedArr = arr.map(element => {
 		return `${element[0]}=${element[1]}`	
 		})
 	
-	let result = `?${arr[0]}&${arr[1]}`.replaceAll(',','=')
+	let result = `${mappedArr[0]}&${mappedArr[1]}`
 	
 	return result
 }

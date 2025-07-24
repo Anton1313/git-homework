@@ -1,13 +1,9 @@
 function crypto (str) {
-	let part1 = str.split('').slice(0,str.length/2).reverse().join('')
-	let tempPart2 = str.split('').slice(str.length/2,str.length)
+	let part1 = str.slice(0,4).split('').reverse().join('')
+	const part2 = str.slice(4); // "word"
+const part2Rearranged = part2[part2.length-1] + part2.slice(1,3) + part2[0]
 
-	let popEl = tempPart2.pop()
-	let shiftEl = tempPart2.shift()
-	tempPart2.unshift(popEl)
-	tempPart2.push(shiftEl)
-	let part2 = tempPart2.join('')
-	return part1 + part2
+return part1 + part2Rearranged
 }
 
 function check(secretP, cleanP){

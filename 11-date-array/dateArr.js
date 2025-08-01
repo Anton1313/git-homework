@@ -8,18 +8,17 @@ const arr = [
 	const newArr = []
 
 	function dateArr (array){
-		array.filter(el => el.length = 10).map(el => {
-			const day = el.slice(0,2)
-			const month = el.slice(3,5)
-			const year = el.slice(6,el.length)
-	
-			if(year !== NaN){
+		array.filter(el => el.length === 10).map(el => {
+			
+			const updatedEL = el.replaceAll('-','/')
+
+				const [day,month,year] = updatedEL.split('/')
+
 				if ((day > 0) && (day <= 31)){
 					if((month > 0) && (month <= 12)){
 						const res = `${day}-${month}-${year}`
 						newArr.push(res)
 					}
-				}
 			}
 		})
 		return newArr

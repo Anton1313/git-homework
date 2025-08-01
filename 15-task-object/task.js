@@ -11,7 +11,7 @@ const toDoList = {
 		this.tasks.push({id,title,priority})
 	},
 	deleteTask(id){
-		this.tasks.filter(el => el.id !== id)
+		this.tasks = this.tasks.filter(el => el.id !== id)
 
 	},
 	updateTask(updatedInfo,id){
